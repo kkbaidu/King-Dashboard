@@ -45,4 +45,80 @@ const countriesChart = [
     },
 ]
 
-export { navButtons, countriesChart };
+const paymentDetails = [
+    {
+        image: require("../assets/salary-img.png"),
+        title: "Salary",
+        paymentType: "Regular Payment",
+        amount: 3500,
+        currency: "US dollar",
+    },
+    {
+        image: require("../assets/web-app-image.png"),
+        title: "Web Project",
+        paymentType: "Unregular Payment",
+        amount: 6500,
+        currency: "Euro",
+    },
+    {
+        image: require("../assets/app-project-image.png"),
+        title: "App Project",
+        paymentType: "Regular Payment",
+        amount: "1200",
+        currency: "Pound",
+    },
+]
+
+const transactionDetails = [
+    {
+        image: require("../assets/up-transact.png"),
+        name: "Jane Cooper",
+        date: "08 Sep, 2022",
+        amount: 1200,
+        currency: "US doolar",
+    },
+    {
+        image: require("../assets/up-transact.png"),
+        name: "Leslie Alexander",
+        date: "08 Sep, 2022",
+        amount: 2890,
+        currency: "Euro",
+    },
+    {
+        image: require("../assets/down-transact.png"),
+        name: "Flight Ticket",
+        date: "08 Sep, 2022",
+        amount: "1000",
+        currency: "Pound",
+    },
+    {
+        image: require("../assets/up-transact.png"),
+        name: "Robert Fox",
+        date: "08 Sep, 2022",
+        amount: 1000,
+        currency: "US dollar",
+    },
+    {
+        image: require("../assets/down-transact.png"),
+        name: "KFC",
+        date: "08 Sep, 2022",
+        amount: 120,
+        currency: "Euro",
+    },
+    {
+        image: require("../assets/down-transact.png"),
+        name: "Jacob Jones",
+        date: "08 Sep, 2022",
+        amount: 1700,
+        currency: "US dollar",
+    },
+    {
+        image: require("../assets/up-transact.png"),
+        name: "Dev Cooper",
+        date: "08 Sep, 2022",
+        amount: 4500,
+        currency: "Pound",
+    },
+]
+
+export { navButtons, countriesChart, paymentDetails, transactionDetails };

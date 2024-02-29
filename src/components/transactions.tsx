@@ -1,0 +1,39 @@
+import upTransact from "../assets/up-transact.png";
+import { transactionDetails } from "../lib/data";
+
+const months: string[] = ["Month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+const Transactions = () => {
+    return (
+        <div className="border rounded-[10px]">
+            <div className="flex flex-row justify-between items-center px-4 h-12 text-white bg-[#070f25] rounded-[10px]">
+                <text className="text-[22px] font-bold"> Transactions </text>
+                <select className="text-white bg-[#070f25] outline-none w-[70px]">
+                    {months.map(month => <option> {month} </option>)}
+                </select>
+            </div>
+                {transactionDetails.map(({image, name, date, amount, currency}) => {
+                    return (
+                    <div className="flex flex-row items-center my-[6px] hover:text-[#fff] hover:bg-[#cccccc] rounded-md cursor-pointer h-[10vh]">
+                        <div className="flex flex-row w-full px-3">
+                            <img src={image} alt="" className="rounded-full w-[45px] h-[45px] mr-2" />
+                            <span className="flex flex-col">
+                                <text className="font-bold"> {name} </text>
+                                <text className="text-[#a6a5a7]"> {date} </text>
+                            </span>
+                        </div>
+                        <div>
+                            <span className="flex flex-col w-[5vw]">
+                                <text className="font-bold"> {amount} </text>
+                                <text className="text-[#a6a5a7]"> {currency} </text>
+                            </span>
+                        </div>
+                    </div>
+                    )
+                }
+                )}
+        </div>
+    )
+}
+
+export default Transactions;

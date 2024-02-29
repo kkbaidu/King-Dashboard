@@ -1,5 +1,3 @@
-import usChart from "../assets/us-chart.png";
-import ukFlag from "../assets/uk-flag.webp";
 import { countriesChart } from "../lib/data";
 
 const CountryChart = () => {
@@ -7,7 +5,7 @@ const CountryChart = () => {
         <div className="flex flex-row w-full justify-between">
         {countriesChart.map(({flag, currency, amount, chartImage, arrowDirection, percentage, color}) => {
             return (
-            <div className={`flex flex-col ${color} w-[55vh] p-[20px] rounded-[10px]`}>
+            <div className={`flex flex-col ${color} w-[25vw] p-[20px] rounded-[10px]`}>
                 <div className="flex flex-row w-[35%] justify-between mb-6">
                     <img src={ flag } alt="" className="w-[50px] h-[50px] rounded-full" />
                     <span className="flex flex-col">
