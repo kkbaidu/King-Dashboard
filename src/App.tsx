@@ -5,46 +5,70 @@ import Transactions from './components/transactions';
 import bellIcon from "./assets/bell-icon.png";
 import profilePic from "./assets/profile-pic.png";
 import dropdownIcon from "./assets/dropdown-icon.png";
-import CountryChart from './components/country-chart';
+import { DeskCountryChart, MobileCountryChart} from './components/country-chart';
 import graph from "./assets/graph.png";
+import menuIcon from "./assets/menu-icon.webp";
 
 function App() {
   return (
-    <div className="flex flex-row">
-      <div className='w-[15%] fixed'>
+    <div className="md:flex md:flex-col container border border-black">
+      <div className='hidden md:block md:w-[15%] lg:w-[15%] fixed'>
         <Sidebar />
       </div>
-      <div className='w-full pl-[18%] pr-[50px] py-[30px]'>
-        <div id='nav bar' className='w-full h-[50px] flex flex-row justify-between items-center border-b-2 border-gray-100 shadow-sm'>
-          <text className='text-[25px] font-bold'> Kingsley Baidu 👋 </text>
-          <div className='flex flex-row w-[8vw] justify-around items-center'>
+      <div className='w-full px-[20px] md:px-normal md:pl-[18%] md:pr-[50px] md:py-[30px]'>
+        <div id='nav bar' className='w-full h-[50px] flex flex-row justify-between items-center border-b-2 border-gray-100 mt-3 md:mt-auto shadow-sm'>
+          <div className='flex flex-row items-center'>
+            <div className="drawer mh:hidden lg:hidden w-[50px] h-[40px] z-50">
+              <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+              <div className="drawer-content">
+                {/* Page content here */}
+                <label htmlFor="my-drawer" className="drawer-button w-[40px] h-[40px]">
+                  <img src={menuIcon} alt="" className='rounded w-[40px] h-[40px] md:hidden lg:hidden' />
+                </label>
+              </div> 
+              <div className="drawer-side">
+                <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                <div className="menu w-50 h-full bg-white">
+                  <Sidebar />
+                </div>
+              </div>
+            </div>
+            <text className='text-[18px] md:text-[25px] font-bold'> Kingsley Baidu 👋 </text>
+          </div>
+          <div className='flex flex-row w-[100px] md:w-[8vw] justify-around items-center'>
             <img src={bellIcon} alt='' className='w-[35px] h-[35px] rounded-full shadow-md cursor-pointer'/>
             <img src={profilePic} alt='' className='w-[35px] h-[35px] rounded-full cursor-pointer' />
             <img src={dropdownIcon} alt='' className='w-[11px] h-[11px] cursor-pointer' />
           </div>
         </div>
-        <div id='country charts'>
-          <div className='text-[20px] font-bold py-3'> Account </div>
-          <CountryChart />
+        <div id='country charts' className='md:w-full'>
+          <div className='text-[20px] font-bold pt-[5vh] pb-6 md:py-3'> Account </div>
+          <div className='hidden md:block'>
+            <DeskCountryChart />
+          </div>
+          <div className='md:hidden'>
+            <MobileCountryChart />
+          </div>
         </div>
-        <div id='down-div' className='flex flex-row pt-[3vh]'>
+        <div id='down-div' className='flex flex-col md:flex-row pt-[3vh]'>
           <div id='grapg and money send' className='flex flex-col w-full'>
             <div id='title' className='flex flex-row justify-between items-center w-full my-3 h-[60px] border-b-2 border-gray-100 shadow-sm'>
               <text className='text-[20px] font-bold'>Send Money</text>
-              <span className='flex flex-row justify-between w-[9vw] h-full'>
+              <span className='flex flex-row justify-between w-[140px] md:w-[9vw] h-full'>
                 <select className='border-none outline-none bg-white w-[50px]'>
-                  USD
                   <option> USD </option>
+                  <option> Euro </option>
+                  <option> Pound </option>
                 </select>
                 <button className='rounded-[10px] border border-black w-[80px] h-[40px] mt-2'> Send </button>
               </span>
             </div>
-            <span className='flex flex-col justify-between items-center w-full border-b-2 border-gray-100 shadow-sm'>
+            <span className='flex flex-col justify-between my-9 md:my-0 items-center w-full border-b-2 border-gray-100 shadow-sm'>
               <div className='flex flex-row justify-between items-center w-full'>
                 <text className='text-[#a6a5a7]'> Today </text>
                 <text> 1USD = 104.00BDT </text>
               </div>
-              <img src={graph} alt='' className='py-[3vh]' />
+              <img src={graph} alt='' className='py-[3vh] md:h-auto' />
             </span>
             <div className='flex flex-row justify-between items-center w-full'>
               <text className='text-[#a6a5a7]'> A month ago </text>
@@ -59,7 +83,7 @@ function App() {
               <Payment />
             </div>
           </div>
-          <div id='transactions' className='flex flex-col w-[47%] pt-[3vh] pl-[2vh]'>
+          <div id='transactions' className='flex flex-col md:w-[47%] w-full pt-[3vh] pb-6 md:pl-[2vh]'>
             <Transactions />
           </div>
         </div>

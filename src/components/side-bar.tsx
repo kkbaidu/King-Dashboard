@@ -4,6 +4,7 @@ import profilePic from "../assets/profile-pic.png";
 import cardIcon from "../assets/card-icon.png";
 import signOutIcon from "../assets/signout-icon.png";
 import { navButtons } from '../lib/data';
+import uploadProfile from "../assets/upload-profile.png";
 
 export const Sidebar = () => {
     const [activeButton, setActiveButton] = useState<number>(0);
@@ -12,14 +13,17 @@ export const Sidebar = () => {
         setActiveButton(index);
     };
     return (
-        <nav className='h-screen flex flex-col justify-between items-center py-[15px] border-r-2 border-gray-100 shadow-xl'>
+        <nav className='h-screen flex flex-col justify-between items-center md:py-[15px] md:border-r-2 md:border-gray-100 md:shadow-xl'>
             <div className='space-y-[20px]'>
                 <span className='flex flex-row'>
                     <img src={cardIcon} alt='Profile Picture'/>
                     <text className='flex justify-end items-end pl-1 text-[20px] font-bold'> King's Dashboard </text>
                 </span>
                 <div className='flex flex-col justify-center items-center text-center'>
-                    <img src={profilePic} className='w-[100px] rounded-full mb-2'/>
+                    <div className='relative'>
+                        <img src={profilePic} className='w-[100px] rounded-full mb-2'/>
+                        <img src={uploadProfile} className='w-[20px] h-[20px] absolute right-0 bottom-3 rounded-full' alt="" />
+                    </div>
                     <text className='font-extrabold text-[20px]'> Kingsley Baidu </text>
                     <text className='font-extralight text-[13px]'> Software Developer </text>
                 </div>
