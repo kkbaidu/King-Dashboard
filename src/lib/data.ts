@@ -1,44 +1,52 @@
-import { Navigation } from "./types";
-import usFlag from "../assets/us-flag.webp";
-import usChart from "../assets/us-chart.png";
-import ukFlag from "../assets/uk-flag.webp";
-import ukChart from "../assets/uk-chart.png";
-import euroFlag from "../assets/euro-flag.png";
-import eauroChart from "../assets/euro-chart.png";
+import { NavButtons, CountriesChart, TransactionDetails, BarGraphData } from "./types"
 
-const navButtons = [
-    {name: "Overview", image: require("../assets/overview-icon.png")},
-    {name: "Analytics", image: require("../assets/analytics-icon.png")},
-    {name: "Card", image: require("../assets/navcard-icon.png")},
-    {name: "Manage", image: require("../assets/manage-icon.png")},
-    {name: "Settings", image: require("../assets/settings-icon.png")},
-    {name: "Support", image: require("../assets/support-icon.png")},
+const navButtons: NavButtons[
+
+] = [
+    {
+        name: "Overview", 
+        image: require("../assets/overview-icon.png")},
+    {
+        name: "Analytics", 
+        image: require("../assets/analytics-icon.png")},
+    {
+        name: "Card", 
+        image: require("../assets/navcard-icon.png")},
+    {
+        name: "Manage", 
+        image: require("../assets/manage-icon.png")},
+    {
+        name: "Settings", 
+        image: require("../assets/settings-icon.png")},
+    {
+        name: "Support", 
+        image: require("../assets/support-icon.png")},
 ]
 
-const countriesChart = [
+const countriesChart: CountriesChart[] = [
     {
-        flag: usFlag,
+        flag: require("../assets/us-flag.webp"),
         currency: "US dollar",
         amount: 4558,
-        chartImage: usChart,
+        chartImage: require("../assets/us-chart.png"),
         arrowDirection: "⬈",
         percentage: 33,
         color: "bg-[#efedfa]",
     },
     {
-        flag: euroFlag,
+        flag: require("../assets/euro-flag.png"),
         currency: "Euro",
         amount: 2670,
-        chartImage: eauroChart,
+        chartImage: require("../assets/euro-chart.png"),
         arrowDirection: "⬋",
         percentage: 12,
         color: "bg-[#faf1e6]",
     },
     {
-        flag: ukFlag,
+        flag: require("../assets/uk-flag.webp"),
         currency: "Pound",
         amount: 5590,
-        chartImage: ukChart,
+        chartImage: require("../assets/uk-chart.png"),
         arrowDirection: "⬈",
         percentage: 33,
         color: "bg-[#f9e8eb]",
@@ -69,7 +77,7 @@ const paymentDetails = [
     },
 ]
 
-const transactionDetails = [
+const transactionDetails: TransactionDetails[] = [
     {
         image: require("../assets/up-transact.png"),
         name: "Jane Cooper",
@@ -88,7 +96,7 @@ const transactionDetails = [
         image: require("../assets/down-transact.png"),
         name: "Flight Ticket",
         date: "08 Sep, 2022",
-        amount: "1000",
+        amount: 1000,
         currency: "Pound",
     },
     {
@@ -121,4 +129,28 @@ const transactionDetails = [
     },
 ]
 
-export { navButtons, countriesChart, paymentDetails, transactionDetails };
+const barGraphData: BarGraphData[] = [
+    {
+        currency: "US dollar",
+        data: {
+            height: ["90", "75", "60", "100", "90", "75", "60"],
+            color: "bg-[#917bf9]",
+        }
+    },
+    {
+        currency: "Euro",
+        data: {
+            height: ["50", "90", "90", "100", "65", "60", "50"],
+            color: "bg-[#ef9d31]",
+        }
+    },
+    {
+        currency: "Pound",
+        data: {
+            height: ["100", "80", "70", "80", "70", "90", "100"],
+            color: "bg-[#e94465]",
+        }
+    }
+]
+
+export { navButtons, countriesChart, paymentDetails, transactionDetails, barGraphData };

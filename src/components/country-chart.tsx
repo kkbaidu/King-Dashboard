@@ -1,6 +1,7 @@
 import { countriesChart } from "../lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import Chart from "./chart";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -20,7 +21,8 @@ const DeskCountryChart = () => {
                         </span>
                     </div>
                     <div className="flex flex-row justify-between items-end">
-                        <img src={ chartImage } alt="" className="w-[16vw]" />
+                        {/* <img src={ chartImage } alt="" className="w-[16vw]" /> */}
+                        <Chart equivalentCurrency={currency}/>
                         <span className="flex flex-row w-[55px] h-[30px] justify-between items-end">
                             <span className="flex justify-center items-center bg-[#000] rounded-full text-white w-[20px] h-[20px] mb-1"> { arrowDirection } </span> 
                             <text className=""> {`${percentage}%`} </text>
@@ -52,14 +54,15 @@ const MobileCountryChart = () => {
                         <SwiperSlide className="flex justify-center aspect-w-1 aspect-h-1 overflow-hidden rounded-[10px] mx-auto hover:shadow-2xl px-[10%] md:px-[5%] cursor-grab" key={index}>
                             <div className={`flex flex-col ${color} w-full p-[20px] rounded-[10px]`}>
                                 <div className="flex flex-row w-[35%] justify-between mb-10">
-                                    <img src={ flag } alt="" className="w-[50px] h-[50px] rounded-full" />
+                                    <img src={ flag } alt="" className="w-[50px] h-[50px] rounded-full mr-2" />
                                     <span className="flex flex-col">
                                         <text className="font-bold text-[18px]">{ amount }</text>
                                         <text className="text-[#a6a5a7] text-[12px]">{ currency }</text>
                                     </span>
                                 </div>
                                 <div className="flex flex-row justify-between items-end">
-                                    <img src={ chartImage } alt="" className="w-[40vw]" />
+                                    {/* <img src={ chartImage } alt="" className="w-[40vw]" /> */}
+                                    <Chart equivalentCurrency={currency}/>
                                     <span className="flex flex-row w-[55px] h-[30px] justify-between items-end">
                                         <span className="flex justify-center items-center bg-[#000] rounded-full text-white w-[20px] h-[20px] mb-1"> { arrowDirection } </span> 
                                         <text className=""> {`${percentage}%`} </text>

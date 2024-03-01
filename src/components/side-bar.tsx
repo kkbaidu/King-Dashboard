@@ -13,7 +13,7 @@ export const Sidebar = () => {
         setActiveButton(index);
     };
     return (
-        <nav className='h-screen flex flex-col justify-between items-center md:py-[15px] md:border-r-2 md:border-gray-100 md:shadow-xl'>
+        <nav className='h-screen flex flex-col justify-between items-center md:py-[15px] md:border-r-2 md:border-gray-100 md:shadow-xl bg-white'>
             <div className='space-y-[20px]'>
                 <span className='flex flex-row'>
                     <img src={cardIcon} alt='Profile Picture'/>

@@ -8,10 +8,11 @@ import dropdownIcon from "./assets/dropdown-icon.png";
 import { DeskCountryChart, MobileCountryChart} from './components/country-chart';
 import graph from "./assets/graph.png";
 import menuIcon from "./assets/menu-icon.webp";
+import Chart from './components/chart';
 
 function App() {
   return (
-    <div className="md:flex md:flex-col container border border-black">
+    <div className="md:flex md:flex-col container">
       <div className='hidden md:block md:w-[15%] lg:w-[15%] fixed'>
         <Sidebar />
       </div>
@@ -35,10 +36,22 @@ function App() {
             </div>
             <text className='text-[18px] md:text-[25px] font-bold'> Kingsley Baidu 👋 </text>
           </div>
-          <div className='flex flex-row w-[100px] md:w-[8vw] justify-around items-center'>
+          <div className='flex flex-row w-[110px] md:w-[140px] justify-around items-center'>
             <img src={bellIcon} alt='' className='w-[35px] h-[35px] rounded-full shadow-md cursor-pointer'/>
-            <img src={profilePic} alt='' className='w-[35px] h-[35px] rounded-full cursor-pointer' />
-            <img src={dropdownIcon} alt='' className='w-[11px] h-[11px] cursor-pointer' />
+            <img src={profilePic} alt='' className='w-[35px] h-[35px] rounded-full cursor-pointer z-10' />
+            <div className="dropdown dropdown-end -ml-4">
+              <div tabIndex={0} role="button" className="btn bg-white outline-none border-none hover:bg-white w-[50px]">
+                <img src={dropdownIcon} alt='' className='w-[11px] h-[11px] cursor-pointer' />
+              </div>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                  <a>
+                    <img src={profilePic} alt='' className='w-[35px] h-[35px] rounded-full cursor-pointer' />
+                    <text>Kingsley Baidu </text>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div id='country charts' className='md:w-full'>
