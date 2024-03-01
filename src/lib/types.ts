@@ -32,10 +32,12 @@ export type TransactionDetails = {
 
 export type BarGraphData = {
     currency: string,
-    data: {
+    data: [
+        {
         height: string[],
         color: string,
-    }
+        }
+    ]
 }
 
 export type Navigation = {

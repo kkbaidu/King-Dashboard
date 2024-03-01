@@ -10,13 +10,21 @@ const Chart = ({equivalentCurrency}: ChartPropType ) => {
                     {
                         currency === equivalentCurrency? 
                         <div className="flex flex-row justify-between items-end w-[160px] md:w-[200px] lg:w-[200px]">
-                            <div className={`${data.color} rounded-[5px] h-[${data.height[0]}px] w-[18px]`}></div>
-                            <div className={`${data.color} rounded-[5px] h-[${data.height[1]}px] w-[18px]`}></div>
-                            <div className={`${data.color} rounded-[5px] h-[${data.height[2]}px] w-[18px]`}></div>
-                            <div className={`${data.color} rounded-[5px] h-[${data.height[3]}px] w-[18px]`}></div>
-                            <div className={`${data.color} rounded-[5px] h-[${data.height[4]}px] w-[18px]`}></div>
-                            <div className={`${data.color} rounded-[5px] h-[${data.height[5]}px] w-[18px]`}></div>
-                            <div className={`${data.color} rounded-[5px] h-[${data.height[6]}px] w-[18px]`}></div>
+                            {
+                                data.map(({height, color}) => {
+                                    return (
+                                        <>
+                                        {
+                                            height.map((high) => {
+                                                return (
+                                                    <div className={`${color} rounded-[5px] h-[${high}px] w-[18px]`}></div>
+                                                )
+                                            })
+                                        }
+                                        </>
+                                    )
+                                })
+                            }
                         </div> : false
                     }
                     </>

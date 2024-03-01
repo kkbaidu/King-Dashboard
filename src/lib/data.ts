@@ -132,24 +132,30 @@ const transactionDetails: TransactionDetails[] = [
 const barGraphData: BarGraphData[] = [
     {
         currency: "US dollar",
-        data: {
-            height: ["90", "75", "60", "100", "90", "75", "60"],
-            color: "bg-[#917bf9]",
-        }
+        data: [
+            {
+                height: ["90", "75", "60", "100", "90", "75", "60"],
+                color: "bg-[#917bf9]",
+            }
+        ]
     },
     {
         currency: "Euro",
-        data: {
-            height: ["50", "90", "90", "100", "65", "60", "50"],
-            color: "bg-[#ef9d31]",
-        }
+        data: [
+            {
+                height: ["50", "90", "90", "100", "65", "60", "50"],
+                color: "bg-[#ef9d31]",
+            }
+        ]
     },
     {
         currency: "Pound",
-        data: {
-            height: ["100", "80", "70", "80", "70", "90", "100"],
-            color: "bg-[#e94465]",
-        }
+        data: [
+            {
+                height: ["100", "80", "70", "80", "70", "90", "100"],
+                color: "bg-[#e94465]",
+            }
+        ]
     }
 ]
 
