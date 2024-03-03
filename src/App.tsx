@@ -8,11 +8,10 @@ import dropdownIcon from "./assets/dropdown-icon.png";
 import { DeskCountryChart, MobileCountryChart} from './components/country-chart';
 import graph from "./assets/graph.png";
 import menuIcon from "./assets/menu-icon.webp";
-import Chart from './components/chart';
 
 function App() {
   return (
-    <div className="md:flex md:flex-col container">
+    <div className="md:flex md:flex-col">
       <div className='hidden md:block md:w-[15%] lg:w-[15%] fixed'>
         <Sidebar />
       </div>
@@ -22,7 +21,6 @@ function App() {
             <div className="drawer mh:hidden lg:hidden w-[50px] h-[40px] z-50">
               <input id="my-drawer" type="checkbox" className="drawer-toggle" />
               <div className="drawer-content">
-                {/* Page content here */}
                 <label htmlFor="my-drawer" className="drawer-button w-[40px] h-[40px]">
                   <img src={menuIcon} alt="" className='rounded w-[40px] h-[40px] md:hidden lg:hidden' />
                 </label>

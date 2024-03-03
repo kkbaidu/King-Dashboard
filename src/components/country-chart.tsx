@@ -12,7 +12,7 @@ const DeskCountryChart = () => {
             <div className="hidden md:flex flex-row w-[130%] md:w-full justify-between">
             {countriesChart.map(({flag, currency, amount, chartImage, arrowDirection, percentage, color}, index) => {
                 return (
-                <div className={`flex flex-col ${color} md:w-[25vw] p-[20px] rounded-[10px]`}>
+                <div className={`flex flex-col ${color} md:w-[25vw] p-[20px] rounded-[10px]`} key={index}>
                     <div className="flex flex-row md:w-[35%] justify-between mb-6">
                         <img src={ flag } alt="" className="w-[50px] h-[50px] rounded-full" />
                         <span className="flex flex-col">
@@ -40,7 +40,7 @@ const MobileCountryChart = () => {
     return (
         <div>
             <Swiper
-            slidesPerView={'auto'}
+                slidesPerView={'auto'}
                 pagination={{
                 dynamicBullets: true,
                 clickable: true,
@@ -51,7 +51,7 @@ const MobileCountryChart = () => {
             {
                 countriesChart.map(({flag, currency, amount, chartImage, arrowDirection, percentage, color}, index) => {
                     return (
-                        <SwiperSlide className="flex justify-center aspect-w-1 aspect-h-1 overflow-hidden rounded-[10px] mx-auto hover:shadow-2xl px-[10%] md:px-[5%] cursor-grab" key={index}>
+                        <SwiperSlide className="aspect-w-1 aspect-h-1 overflow-hidden rounded-[10px] shadow-xl cursor-grab" key={index}>
                             <div className={`flex flex-col ${color} w-full p-[20px] rounded-[10px]`}>
                                 <div className="flex flex-row w-[35%] justify-between mb-10">
                                     <img src={ flag } alt="" className="w-[50px] h-[50px] rounded-full mr-2" />
