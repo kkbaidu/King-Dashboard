@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import profilePic from "../assets/profile-pic.png";
 import cardIcon from "../assets/card-icon.png";
-import signOutIcon from "../assets/signout-icon.png";
+import signoutImg from "../assets/signout-img.svg";
 import { navButtons } from '../lib/data';
 import uploadProfile from "../assets/upload-profile.png";
 
@@ -48,7 +48,7 @@ export const Sidebar = () => {
                 </div>
             </div>
             <button className='flex flex-row w-full pl-10'>
-                <img src={signOutIcon} alt='S-icon' className='w-[20px] h-[20px]'/>
+                <img src={signoutImg} alt='S-icon' className='w-[20px] h-[20px]'/>
                 <span className='text-[#a6a5a7]'>Sign Out </span>
             </button>
         </nav>

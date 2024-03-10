@@ -1,26 +1,38 @@
-import { NavButtons, CountriesChart, TransactionDetails, BarGraphData } from "./types"
+import { NavButtons, CountriesChart, TransactionDetails, BarGraphData } from "./types";
+import overviewImg from "../assets/overview-img.svg";
+import analyticsImg from "../assets/analytics-img.svg";
+import cardImg from "../assets/card-img.svg";
+import manageImg from "../assets/manage-img.svg";
+import settingImg from "../assets/settings-img.svg";
+import supportImg from "../assets/support-img.svg";
 
 const navButtons: NavButtons[
 
 ] = [
     {
         name: "Overview", 
-        image: require("../assets/overview-icon.png")},
+        image: overviewImg
+    },
     {
         name: "Analytics", 
-        image: require("../assets/analytics-icon.png")},
+        image: analyticsImg
+    },
     {
         name: "Card", 
-        image: require("../assets/navcard-icon.png")},
+        image: cardImg
+    },
     {
         name: "Manage", 
-        image: require("../assets/manage-icon.png")},
+        image: manageImg
+    },
     {
         name: "Settings", 
-        image: require("../assets/settings-icon.png")},
+        image: settingImg
+    },
     {
         name: "Support", 
-        image: require("../assets/support-icon.png")},
+        image: supportImg
+    },
 ]
 
 const countriesChart: CountriesChart[] = [
