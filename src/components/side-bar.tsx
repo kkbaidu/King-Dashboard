@@ -27,7 +27,7 @@ export const Sidebar = () => {
                     <span className='font-extrabold text-[20px]'> Kingsley Baidu </span>
                     <span className='font-extralight text-[13px]'> Software Developer </span>
                 </div>
-                <div className='flex flex-col px-4'>
+                <div className='flex flex-col px-2'>
                     {
                         navButtons.map(({ name, image}, index) => {
                             return (

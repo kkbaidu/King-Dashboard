@@ -12,7 +12,7 @@ import menuIcon from "./assets/menu-icon.webp";
 function App() {
   return (
     <div className="md:flex md:flex-col">
-      <div className='hidden md:block md:w-[15%] lg:w-[15%] fixed'>
+      <div className='hidden md:block md:w-[17%] lg:w-[17%] fixed'>
         <Sidebar />
       </div>
       <div className='w-full px-[20px] md:px-normal md:pl-[18%] md:pr-[50px] md:py-[30px]'>

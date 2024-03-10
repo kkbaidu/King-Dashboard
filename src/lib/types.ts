@@ -8,7 +8,6 @@ export type CountriesChart = {
     flag: any,
     currency: string,
     amount: number,
-    chartImage: any,
     arrowDirection: string,
     percentage: number,
     color: string,

@@ -1,6 +1,6 @@
 import { countriesChart } from "../lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import Chart from "./chart";
 
 import 'swiper/css';
@@ -10,7 +10,7 @@ const DeskCountryChart = () => {
     return (
         <div>
             <div className="hidden md:flex flex-row w-[130%] md:w-full justify-between">
-            {countriesChart.map(({flag, currency, amount, chartImage, arrowDirection, percentage, color}, index) => {
+            {countriesChart.map(({flag, currency, amount, arrowDirection, percentage, color}, index) => {
                 return (
                 <div className={`flex flex-col ${color} md:w-[25vw] p-[20px] rounded-[10px] shadow-lg`} key={index}>
                     <div className="flex flex-row md:w-[35%] justify-between mb-6">
@@ -49,7 +49,7 @@ const MobileCountryChart = () => {
                 className="mySwiper"
             >
             {
-                countriesChart.map(({flag, currency, amount, chartImage, arrowDirection, percentage, color}, index) => {
+                countriesChart.map(({flag, currency, amount, arrowDirection, percentage, color}, index) => {
                     return (
                         <SwiperSlide className="aspect-w-1 aspect-h-1 overflow-hidden rounded-[10px] pb-2 cursor-grab" key={index}>
                             <div className={`flex flex-col ${color} w-full p-[20px] rounded-[10px] h-[250px] shadow-xl`}>
