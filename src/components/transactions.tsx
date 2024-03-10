@@ -7,7 +7,7 @@ const Transactions = () => {
     return (
         <div className="border rounded-[10px] w-full">
             <div className="flex flex-row justify-between items-center px-4 h-12 text-white bg-[#070f25] rounded-[10px]">
-                <text className="text-[22px] font-bold"> Transactions </text>
+                <span className="text-[22px] font-bold"> Transactions </span>
                 <select className="text-white bg-[#070f25] outline-none w-[70px]">
                     {months.map(month => <option> {month} </option>)}
                 </select>
@@ -18,14 +18,14 @@ const Transactions = () => {
                         <div className="flex flex-row w-full px-3">
                             <img src={image} alt="" className="rounded-full w-[45px] h-[45px] mr-2" />
                             <span className="flex flex-col">
-                                <text className="font-bold"> {name} </text>
-                                <text className="text-[#a6a5a7]"> {date} </text>
+                                <span className="font-bold"> {name} </span>
+                                <span className="text-[#a6a5a7]"> {date} </span>
                             </span>
                         </div>
                         <div>
                             <span className="flex flex-col w-[80px] md:w-[5vw]">
-                                <text className="font-bold"> {amount} </text>
-                                <text className="text-[#a6a5a7]"> {currency} </text>
+                                <span className="font-bold"> {amount} </span>
+                                <span className="text-[#a6a5a7]"> {currency} </span>
                             </span>
                         </div>
                     </div>

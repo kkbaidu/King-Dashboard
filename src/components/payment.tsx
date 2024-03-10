@@ -11,13 +11,13 @@ const Payment = () => {
                     <div className="flex flex-row w-full">
                         <img src={image} alt="" className="rounded-full mr-2 w-[47px] h-[47px]" />
                         <span className="flex flex-col">
-                            <text className="font-bold"> {title} </text>
-                            <text className="text-[#a6a5a7]"> {paymentType} </text>
+                            <span className="font-bold"> {title} </span>
+                            <span className="text-[#a6a5a7]"> {paymentType} </span>
                         </span>
                     </div>
                     <div className="flex flex-row justify-between">
-                        <text className="font-extrabold"> {amount} </text>
-                        <text className="text-[#a6a5a7]"> {currency} </text>
+                        <span className="font-extrabold"> {amount} </span>
+                        <span className="text-[#a6a5a7]"> {currency} </span>
                     </div>
                 </div>
                 )}

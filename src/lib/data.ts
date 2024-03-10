@@ -134,7 +134,7 @@ const barGraphData: BarGraphData[] = [
         currency: "US dollar",
         data: [
             {
-                height: ["90", "75", "60", "100", "90", "75", "60"],
+                height: ["h-[90px]", "h-[75px]", "h-[60px]", "h-[100px]", "h-[90px]", "h-[75px]", "h-[60px]"],
                 color: "bg-[#917bf9]",
             }
         ]
@@ -143,7 +143,7 @@ const barGraphData: BarGraphData[] = [
         currency: "Euro",
         data: [
             {
-                height: ["50", "90", "90", "100", "65", "60", "50"],
+                height: ["h-[50px]", "h-[90px]", "h-[90px]", "h-[100px]", "h-[65px]", "h-[60px]", "h-[50px]"],
                 color: "bg-[#ef9d31]",
             }
         ]
@@ -152,7 +152,7 @@ const barGraphData: BarGraphData[] = [
         currency: "Pound",
         data: [
             {
-                height: ["100", "80", "70", "80", "70", "90", "100"],
+                height: ["h-[100px]", "h-[80px]", "h-[70px]", "h-[80px]", "h-[70px]", "h-[90px]", "h-[100px]"],
                 color: "bg-[#e94465]",
             }
         ]

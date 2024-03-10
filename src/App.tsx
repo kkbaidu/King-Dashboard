@@ -35,7 +35,7 @@ function App() {
             <text className='text-[18px] md:text-[25px] font-bold'> Kingsley Baidu 👋 </text>
           </div>
           <div className='flex flex-row w-[110px] md:w-[140px] justify-around items-center'>
-            <img src={bellIcon} alt='' className='w-[35px] h-[35px] rounded-full shadow-md cursor-pointer'/>
+            <img src={bellIcon} alt='' className='w-[35px] h-[35px] rounded-full shadow-md cursor-pointer hover:animate-pulse'/>
             <img src={profilePic} alt='' className='w-[35px] h-[35px] rounded-full cursor-pointer z-10' />
             <div className="dropdown dropdown-end -ml-4">
               <div tabIndex={0} role="button" className="btn bg-white outline-none border-none hover:bg-white w-[50px]">
